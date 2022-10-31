@@ -14,4 +14,6 @@ Project was bootstrapped with [Create React App](https://github.com/facebook/cre
 
 [@carbon/react Storybook](https://react.carbondesignsystem.com)
 
+[@carbon/react Storybook: GitHub](https://github.com/carbon-design-system/carbon/tree/main/packages/react)
+
 [Carbon Create-React-App Tutorial](https://github.com/carbon-design-system/carbon-tutorial)

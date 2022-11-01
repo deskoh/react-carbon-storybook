@@ -1,1 +1,31 @@
+// Full token list: https://github.com/carbon-design-system/carbon/blob/main/packages/themes/docs/sass.md#api
+
+//overriding theme token
+// @use '@carbon/styles/scss/theme' with (
+//   $theme: (
+//     background: #369,
+//     text-primary: #111,
+//   )
+// );
+@use '@carbon/react/scss/themes';
+@use '@carbon/react/scss/theme' with (
+  $theme: themes.$g100
+);
+
+// override a component token
+@use '@carbon/react/scss/components/button/tokens' with (
+  // $button-primary: #f00
+  // override the values for each theme
+  $button-primary: (
+    fallback: #0f62fe,
+    values: (
+      (theme: themes.$g100, value: #0f0),
+    ),
+  )
+);
+
 @use '@carbon/react';
+
+:root {
+  @include theme.theme();
+}

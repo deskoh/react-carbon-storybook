@@ -10,7 +10,8 @@ import './App.scss';
 function App() {
   return (
     <>
-      <Theme theme="g100">
+      {/* <Theme theme="g100"> */}
+      <Theme>
         <TutorialHeader />
       </Theme>
       <Content>

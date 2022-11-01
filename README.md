@@ -17,3 +17,13 @@ Project was bootstrapped with [Create React App](https://github.com/facebook/cre
 [@carbon/react Storybook: GitHub](https://github.com/carbon-design-system/carbon/tree/main/packages/react)
 
 [Carbon Create-React-App Tutorial](https://github.com/carbon-design-system/carbon-tutorial)
+
+[Color Tokens by Theme](https://carbondesignsystem.com/guidelines/color/usage/)
+
+[Styles Docs](https://github.com/carbon-design-system/carbon/tree/main/packages/styles)
+
+[SASS Docs](https://github.com/carbon-design-system/carbon/blob/main/packages/styles/docs/sass.md)
+
+[Theme Tokens](https://github.com/carbon-design-system/carbon/blob/main/packages/themes/docs/sass.md#tokens)
+
+[Custom Theme Examples](https://github.com/carbon-design-system/carbon/blob/main/examples/custom-theme/src/index.scss)

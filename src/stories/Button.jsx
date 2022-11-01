@@ -34,7 +34,7 @@ Button.propTypes = {
   /**
    * Button contents
    */
-  label: PropTypes.string.isRequired,
+  // label: PropTypes.string.isRequired,
   /**
    * Optional click handler
    */
@@ -42,8 +42,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  backgroundColor: null,
+  // backgroundColor: null,
   primary: false,
   size: 'medium',
-  onClick: undefined,
+  // onClick: undefined,
 };

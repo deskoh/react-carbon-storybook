@@ -1,5 +1,10 @@
 // Full token list: https://github.com/carbon-design-system/carbon/blob/main/packages/themes/docs/sass.md#api
 
+// disable font-face declarations to be emitted
+@use '@carbon/react/scss/config' with (
+  $css--font-face: false
+);
+
 //overriding theme token
 // @use '@carbon/styles/scss/theme' with (
 //   $theme: (
@@ -9,8 +14,13 @@
 // );
 @use '@carbon/react/scss/themes';
 @use '@carbon/react/scss/theme' with (
-  $theme: themes.$g100
+  $theme: themes.$g100,
+  // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
+  // $layer-01: #0f0,
+  // $text-secondary: #f00,
 );
+
+@use '@carbon/styles/scss/colors';
 
 // override a component token
 @use '@carbon/react/scss/components/button/tokens' with (
@@ -19,7 +29,7 @@
   $button-primary: (
     fallback: #0f62fe,
     values: (
-      (theme: themes.$g100, value: #0f0),
+      (theme: themes.$g100, value: colors.$blue-60),
     ),
   )
 );

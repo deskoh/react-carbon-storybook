@@ -5,25 +5,46 @@
   $css--font-face: false
 );
 
-//overriding theme token
+@use '@carbon/styles/scss/themes';
+
+// 1. Change default theme of Carbon
 // @use '@carbon/styles/scss/theme' with (
+//   $theme: themes.$g100,
+//   // Override tokens (background does not seem to work correctly)
+//   // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
+//   // $layer-01: #0f0,
+//   // $background: #369,
+//   // $text-primary: #f00,
+//   // $text-secondary: #f00,
+// );
+
+// 2. Configure custom theme
+// @use '@carbon/styles/scss/theme' with (
+//   $fallback: themes.$g100,
 //   $theme: (
+//     // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
 //     background: #369,
-//     text-primary: #111,
+//     text-primary: #f00,
+//     layer-01: #0f0,
 //   )
 // );
-@use '@carbon/react/scss/themes';
-@use '@carbon/react/scss/theme' with (
-  $theme: themes.$g100,
-  // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
-  // $layer-01: #0f0,
-  // $text-secondary: #f00,
+
+// 3. Extend the g100 theme with your own tokens
+@use '@carbon/styles/scss/theme' with (
+  $fallback: themes.$g100,
+  $theme: (
+    // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
+    // layer-01: #0f0,
+    // background: #369,
+    // text-primary: #f00,
+    custom-token-01: #000000,
+  )
 );
 
 @use '@carbon/styles/scss/colors';
 
 // override a component token
-@use '@carbon/react/scss/components/button/tokens' with (
+@use '@carbon/styles/scss/components/button/tokens' with (
   // $button-primary: #f00
   // override the values for each theme
   $button-primary: (
@@ -35,7 +56,13 @@
 );
 
 @use '@carbon/react';
+@use '@carbon/react/scss/type';
 
 :root {
   @include theme.theme();
+}
+
+// Font classes
+.my-selector {
+  @include type.type-style('heading-05');
 }

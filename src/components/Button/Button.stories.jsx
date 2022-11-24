@@ -3,7 +3,7 @@ import { Button } from '@carbon/react';
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Carbon/Button',
-  component: 'Button2',
+  component: 'Button',
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     kind: {

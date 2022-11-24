@@ -5,6 +5,9 @@
   $css--font-face: false
 );
 
+// Equivalent:
+// @carbon/react/scss/themes
+// @carbon/themes/scss/themes
 @use '@carbon/styles/scss/themes';
 
 // 1. Change default theme of Carbon
@@ -19,25 +22,16 @@
 // );
 
 // 2. Configure custom theme
-// @use '@carbon/styles/scss/theme' with (
-//   $fallback: themes.$g100,
-//   $theme: (
-//     // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
-//     background: #369,
-//     text-primary: #f00,
-//     layer-01: #0f0,
-//   )
-// );
-
-// 3. Extend the g100 theme with your own tokens
 @use '@carbon/styles/scss/theme' with (
+  // Optional: Extend existing theme
   $fallback: themes.$g100,
   $theme: (
     // Refer to tokens in https://carbondesignsystem.com/guidelines/color/usage/
-    // layer-01: #0f0,
     // background: #369,
     // text-primary: #f00,
-    custom-token-01: #000000,
+    // layer-01: #0f0,
+    // Optional: add custom token:
+    // custom-token-01: #000000,
   )
 );
 
